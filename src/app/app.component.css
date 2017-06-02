@@ -1,0 +1,11 @@
+.main {
+    position: relative;
+    height: 100%;
+    padding-top: 21px;
+    padding-right: 300px;
+}
+
+.content {
+    height: 100%;
+    padding: 20px;
+}
