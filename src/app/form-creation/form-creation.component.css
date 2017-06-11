@@ -1,0 +1,87 @@
+.content {
+    width: 100%;
+}
+
+
+.background-img {
+    /*background-image:url(./img/card-bottom-bg.jpg) repeat !important;*/
+}
+
+.right-menu {
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    height: 260px;
+    /*background: #f2f5f8;*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    border-radius: 10px
+}
+
+.right-menu-header {
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+    background: #f2f5f8;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    padding-right: 9px
+}
+
+.close-right-menu {
+    color: rgba(0, 0, 0, .5);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px
+}
+
+.close-right-menu:hover {
+    color: black
+}
+.right-menu-content {
+    height: 170px;
+}
+
+.right-menu-footer {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.right-menu-add-button {
+    margin-right: 30px;
+}
+
+.hr-beetwen {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px
+}
+
+.hr {
+    width: 245px;
+    height: 2px;
+    background: rgba(157, 157, 157, .5);
+}
+
+.right-menu-content {
+    padding: 35px;
+    padding-top: 25px;
+}
+
+.input-description, .input-link {
+    width: 280px;
+    border: 1px solid rgba(157, 157, 157, .5);
+    background: white;
+    border-radius: 4px;
+    outline: none;
+    padding-left: 8px;
+}
+
+.input-description {
+    margin-bottom: 20px
+}
+
+.select-subject {
+    margin-bottom: 20px;
+}
