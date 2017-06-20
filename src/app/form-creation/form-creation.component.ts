@@ -1,11 +1,5 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition
-} from '@angular/animations';
+import { Component, OnInit, Input, Output, OnChanges, EventEmitter } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'form-creation',
@@ -15,28 +9,33 @@ import {
     trigger('showForm', [
       state('inactive', style({
         opacity: 0,
-        display: "none"
+        display: 'none'
       })),
       state('active',   style({
-        //opacity: 1,
-        //display: "block"
+         opacity: 1,
+         display: 'block',
       })),
-      transition('inactive => active', animate('1000ms')),
-      //transition('active => inactive', animate('500ms'))
+      transition('inactive => active', animate('400ms')),
+      transition('active => inactive', animate('300ms'))
     ])
   ]
 })
 export class FormCreationComponent implements OnInit, OnChanges {
-    @Input() public addedLink: boolean = false;
     private _showForm = 'inactive';
+    @Input() public addedLink = false;
+    @Output() close = new EventEmitter<boolean>();
+    closeForm() {
+        this._showForm = 'inactive'
+        setTimeout(() => {
+            this.close.emit();
+        }, 200)
+    }
     constructor() { }
 
 
     ngOnChanges() {
-      console.log(123)
-      if(this.addedLink) {
-        console.log(this.addedLink)
-        //this._showForm = 'active';
+      if (this.addedLink) {
+        this._showForm = 'active';
       }
     }
     ngOnInit() {}

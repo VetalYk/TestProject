@@ -1,6 +1,6 @@
-<div class="show-form-button">
-    <button type="button" name="button" (click)="addedLink = true">Added link</button>
+<div class="show-form-button" [hidden]="addedLink">
+    <button type="button" name="button" (click)="addedLink = true" class="btn btn-default">Added link</button>
 </div>
-<div *ngIf="addedLink">
-    <form-creation [addedLink]="addedLink"></form-creation>
+<div [hidden]="!addedLink">
+    <form-creation (close)='hideForm()' [addedLink]="addedLink"></form-creation>
 </div>

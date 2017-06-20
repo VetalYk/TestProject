@@ -1,7 +1,7 @@
-<div  [@showForm]="_showForm" class="content">
-    <div class="right-menu">
+<div class="content">
+    <div class="right-menu" [@showForm]="_showForm">
         <div class="right-menu-header">
-            <div class="close-right-menu">x</div>
+            <div class="close-right-menu" (click)="closeForm()">x</div>
         </div>
         <div class="background-img">
             <div class="right-menu-content">
